@@ -169,3 +169,34 @@ article span {
   }
 
 }
+
+/* REDES SOCIAIS */
+.redes-sociais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.rede-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-branco);
+  color: var(--cor-texto);
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+.rede-link:hover {
+  background: var(--cor-principal);
+  color: #ffffff;
+  border-color: var(--cor-principal);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
