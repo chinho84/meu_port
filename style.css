@@ -237,3 +237,54 @@ article span {
   font-size: 16px;
   font-weight: 500;
 }
+
+/* ARTIGOS */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.artigo-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.artigo-tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--cor-principal);
+  background: #eff6ff;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.artigo-estado {
+  font-size: 11px;
+  color: #92400e;
+  background: #fef3c7;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.artigo-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.artigo-keywords span {
+  font-size: 11px;
+  color: var(--cor-texto-suave);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.artigo-sem-link {
+  font-size: 12px;
+  color: var(--cor-texto-suave);
+  margin: 0;
+}
