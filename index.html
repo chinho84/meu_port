@@ -17,13 +17,28 @@
     </div>
 
     <header>
+      <!-- MENU LATERAL -->
+<div id="menu-lateral" class="menu-lateral">
+  <div class="menu-lateral-conteudo">
+    <button id="fechar-menu" class="fechar-menu">✕</button>
+    <h3>Inssa A. Abudo</h3>
+    <p>Investigador em TIC & Inclusão Digital</p>
+    <ul>
+      <li><a href="#sobre" onclick="fecharMenu()">Sobre</a></li>
+      <li><a href="#artigos" onclick="fecharMenu()">Artigos</a></li>
+      <li><a href="#contacto" onclick="fecharMenu()">Contacto</a></li>
+    </ul>
+  </div>
+</div>
+<div id="overlay" class="overlay"></div>
         <nav>
-            <span>Inssa A. Abudo</span>
+          <button id="btn-menu" class="btn-menu">☰</button>
             <ul>
                 <li><a href="#sobre"><i class="fas fa-user"></i> Sobre</a></li>
                 <li><a href="#artigos"><i class="fas fa-newspaper"></i> Artigos</a></li>
                 <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
+             <button id="btn-tema" title="Mudar tema">🌙</button>
         </nav>
     </header>
 
