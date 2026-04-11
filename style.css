@@ -7,6 +7,11 @@
   --cor-borda: #e2e8f0;       /* bordas */
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +28,9 @@ header {
   background-color: var(--cor-branco);
   padding: 16px 32px;
   border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav {
@@ -47,10 +55,18 @@ nav a {
   text-decoration: none;
   color: var(--cor-texto-suave);
   font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 nav a:hover {
-  color: var(--cor-texto);
+  color: var(--cor-principal);
+  font-weight: 600;
+}
+
+nav a i {
+  font-size: 14px;
 }
 
 h1 {
@@ -287,4 +303,17 @@ article {
   font-size: 12px;
   color: var(--cor-texto-suave);
   margin: 0;
+}
+
+.sobre-titulo {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cor-principal);
+  margin-bottom: 16px;
+}
+
+#sobre,
+#artigos,
+#contacto {
+  scroll-margin-top: 100px;
 }
