@@ -10,17 +10,24 @@ window.addEventListener('load', function() {
 
 // MODO CLARO / ESCURO
 const btnTema = document.getElementById('btn-tema');
+const btnTemaLateral = document.getElementById('btn-tema-lateral');
+
+function toggleTema() {
+  document.body.classList.toggle('dark');
+
+  const isDark = document.body.classList.contains('dark');
+  const emoji = isDark ? '☀️' : '🌙';
+
+  if (btnTema) btnTema.textContent = emoji;
+  if (btnTemaLateral) btnTemaLateral.textContent = emoji;
+}
 
 if (btnTema) {
-  btnTema.addEventListener('click', function() {
-    document.body.classList.toggle('dark');
+  btnTema.addEventListener('click', toggleTema);
+}
 
-    if (document.body.classList.contains('dark')) {
-      btnTema.textContent = '☀️';
-    } else {
-      btnTema.textContent = '🌙';
-    }
-  });
+if (btnTemaLateral) {
+  btnTemaLateral.addEventListener('click', toggleTema);
 }
 
 // MENU LATERAL
