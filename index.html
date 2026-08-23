@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inssa A. Abudo | Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="perfil.js" defer></script>
+</head>
+<body>
+    <!-- LOADING -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <header>
+        <!-- MENU LATERAL -->
+        <div id="menu-lateral" class="menu-lateral">
+            <div class="menu-lateral-conteudo">
+                <button id="fechar-menu" class="fechar-menu">✕</button>
+                <h3>Inssa A. Abudo</h3>
+                <p>Desenvolvedor de Sistemas & Inclusão Digital</p>
+                <ul>
+    <li><a href="#sobre" onclick="fecharMenu()">Sobre</a></li>
+    <li><a href="#competencias" onclick="fecharMenu()">Competências</a></li>
+    <li><a href="#experiencia" onclick="fecharMenu()">Experiência</a></li>
+    <li><a href="#formacao" onclick="fecharMenu()">Formação</a></li>
+    <li><a href="#artigos" onclick="fecharMenu()">Artigos</a></li>
+                </ul>
+                <button id="btn-tema-lateral" class="btn-tema-lateral" title="Mudar tema">🌙</button>
+            </div>
+        </div>
+        <div id="overlay" class="overlay"></div>
+
+        <nav>
+            <button id="btn-menu" class="btn-menu">☰</button>
+            <ul>
+    <li><a href="#sobre"><i class="fas fa-user"></i> Sobre</a></li>
+    <li><a href="#competencias"><i class="fas fa-code"></i> Competências</a></li>
+    <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiência</a></li>
+    <li><a href="#formacao"><i class="fas fa-graduation-cap"></i> Formação</a></li>
+    <li><a href="#artigos"><i class="fas fa-newspaper"></i> Artigos</a></li>
+</ul>
+            <button id="btn-tema" title="Mudar tema">🌙</button>
+        </nav>
+    </header>
+
+    <!-- ÍCONES SOCIAIS FIXOS (lateral direita) -->
+    <div class="social-fixed">
+        <a href="https://linkedin.com/in/inssa-agostinho-abudo" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/chinho84" target="_blank" title="GitHub" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:seuemail@gmail.com" title="Email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+        <!-- SOBRE -->
+    <section id="sobre">
+        <div class="sobre-container">
+            <img src="fotolink.jpg" alt="Inssa A. Abudo" class="foto-perfil">
+            <div class="sobre-texto">
+                <div class="sobre-tag">Pemba · Moçambique</div>
+                <h1>Inssa A. Abudo</h1>
+                <p class="sobre-titulo">Desenvolvedor de Sistemas | Oficial de Inclusão Digital | Formador em TIC</p>
+                
+                <p>Sou Licenciado em Tecnologias de Informação e Comunicação e mestrando em Gestão de Projectos. Actuo na interseção entre tecnologia, educação e impacto social, com experiência em formação digital e apoio a comunidades em contextos humanitários e de desenvolvimento.</p>
+                
+                <p>Tenho trabalhado com jovens e comunidades em Mocímboa da Praia, Pemba e Maputo, promovendo competências digitais e o uso responsável da tecnologia.</p>
+                
+                <a href="#experiencia" class="botao">Ver a minha trajetória</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPETÊNCIAS TÉCNICAS -->
+    <section id="competencias">
+        <h2>Competências Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Desenvolvimento Web</h3>
+                <p>HTML · CSS · JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <h3>Inteligência Artificial</h3>
+                <p>Fundamentos de AI · Ferramentas de IA aplicadas</p>
+            </div>
+            <div class="skill-card">
+                <h3>Hardware & Suporte</h3>
+                <p>Manutenção de equipamentos · Suporte técnico</p>
+            </div>
+            <div class="skill-card">
+                <h3>Inclusão Digital</h3>
+                <p>Formação em TIC · Literacia Digital</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <section id="experiencia">
+        <h2>Experiência Profissional</h2>
+        <div class="experiencia-lista">
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <h3>Oficial Digital da Juventude</h3>
+                    <span class="exp-local">NRC · Mocímboa da Praia</span>
+                </div>
+                <p class="exp-periodo">Actual</p>
+                <p>Responsável pela promoção de competências digitais junto de jovens. Desenvolvo e implemento actividades de formação em TIC, inclusão digital e uso seguro da tecnologia em contextos de deslocamento e recuperação.</p>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <h3>Intérprete Médico e Tradutor (Inglês – Português)</h3>
+                    <span class="exp-local">MSF · Mocímboa da Praia</span>
+                </div>
+                <p class="exp-periodo">Anterior</p>
+                <p>Apoio à comunicação médica entre equipas Medicas e pacientes, garantindo precisão e sensibilidade cultural em contexto humanitário.</p>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-header">
+                    <h3>Experiência em TIC e Formação</h3>
+                    <span class="exp-local">MGIS · Maputo | Mainsha Makulu · Pemba </span>
+                </div>
+                <p class="exp-periodo">Anterior</p>
+                <p>Actuação em formação e apoio técnico em Tecnologias de Informação, contribuindo para o desenvolvimento de competências digitais em diferentes contextos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORMAÇÃO ACADÉMICA -->
+    <section id="formacao">
+        <h2>Formação Académica</h2>
+        <div class="formacao-lista">
+
+            <div class="form-card">
+                <h3>Mestrado em Gestão de Projectos</h3>
+                <p class="form-instituicao">Universidade Íris · Pemba</p>
+                <p class="form-estado">Em curso</p>
+            </div>
+
+            <div class="form-card">
+                <h3>Licenciatura em Tecnologias de Informação e Comunicação</h3>
+                <p class="form-instituicao">Universidade Católica de Moçambique (UCM)</p>
+                <p class="form-estado">Concluído</p>
+            </div>
+
+            <div class="form-card">
+                <h3>Estudos em Políticas Sociais</h3>
+                <p class="form-instituicao">Hisdale College · Online</p>
+                <p class="form-estado">Concluído</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARTIGOS -->
+    <section id="artigos">
+        <h2>Artigos e Pesquisas</h2>
+        <div class="artigos-grid">
+
+            <article>
+  <div class="artigo-meta">
+    <span class="artigo-tag">Mestrado · 2025</span>
+    <span class="artigo-estado">Em revisão</span>
+  </div>
+  <h3>Responsabilidade Social Universitária</h3>
+  <p class="artigo-autores">Autores: Ivoldio, Ivan, Isidora e Inssa A. Abudo</p>
+  <p>Este artigo analisa a percepção, os impactos sociais e o nível de participação comunitária decorrentes da presença da Universidade Íris no bairro de Maringanha, cidade de Pemba, entre 2023 e 2030.</p>
+  <div class="artigo-keywords">
+    <span>Comunidade</span>
+    <span>Impacto social</span>
+    <span>Inclusão</span>
+    <span>Participação</span>
+  </div>
+  <a href="responsabilidade-social.pdf" target="_blank" class="botao">Ler artigo</a>
+</article>
+
+<article>
+  <div class="artigo-meta">
+    <span class="artigo-tag">Mestrado · 2025</span>
+    <span class="artigo-estado">Em revisão</span>
+  </div>
+  <h3>Tecnologia no Gerenciamento de Projectos em Startups</h3>
+  <p class="artigo-autores">Autor: Inssa A. Abudo</p>
+  <p>Este artigo investiga de que forma o uso de ferramentas digitais e metodologias ágeis pode contribuir para uma gestão de projectos mais eficaz em startups moçambicanas.</p>
+  <div class="artigo-keywords">
+    <span>Gestão de Projectos</span>
+    <span>Startups</span>
+    <span>Inovação</span>
+    <span>Liderança Adaptativa</span>
+  </div>
+  <a href="tecnologia-gestao-projetos.pdf" target="_blank" class="botao">Ler artigo</a>
+</article>
+        </div>
+    </section>
+
+</body>
+</html>
