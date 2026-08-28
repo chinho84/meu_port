@@ -639,3 +639,45 @@ section h2.visivel,
   margin-bottom: 10px;
   font-style: italic;
 }
+
+/* ====================== CAMINHO A ====================== */
+.botao-secundario {
+  background: transparent;
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  margin-left: 10px;
+}
+
+.botao-secundario:hover {
+  background: var(--cor-principal);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .botao-secundario {
+    margin-left: 0;
+    margin-top: 12px;
+    display: inline-block;
+  }
+}
+
+/* ====================== CAMINHO A ====================== */
+.botao-secundario {
+  background: transparent;
+  color: var(--cor-principal);
+  border: 2px solid var(--cor-principal);
+  margin-left: 10px;
+}
+
+.botao-secundario:hover {
+  background: var(--cor-principal);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .botao-secundario {
+    margin-left: 0;
+    margin-top: 12px;
+    display: inline-block;
+  }
+}

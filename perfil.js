@@ -1,4 +1,3 @@
-// LOADING
 window.addEventListener('load', function() {
     setTimeout(function() {
         const loading = document.getElementById('loading');
@@ -8,7 +7,6 @@ window.addEventListener('load', function() {
     }, 900);
 });
 
-// TEMA CLARO / ESCURO
 const btnTema = document.getElementById('btn-tema');
 const btnTemaLateral = document.getElementById('btn-tema-lateral');
 
@@ -23,7 +21,6 @@ function toggleTema() {
 if (btnTema) btnTema.addEventListener('click', toggleTema);
 if (btnTemaLateral) btnTemaLateral.addEventListener('click', toggleTema);
 
-// MENU LATERAL
 const btnMenu = document.getElementById('btn-menu');
 const menuLateral = document.getElementById('menu-lateral');
 const fecharMenuBtn = document.getElementById('fechar-menu');
@@ -43,7 +40,6 @@ if (btnMenu && menuLateral && overlay) {
     overlay.addEventListener('click', fecharMenu);
 }
 
-// ANIMAÇÕES DE SCROLL
 const elementos = document.querySelectorAll(
   'article, section h2, .artigo-keywords, .skill-card, .exp-card, .form-card'
 );
