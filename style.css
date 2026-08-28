@@ -282,19 +282,21 @@ p {
 /* ====================== SOBRE ====================== */
 .sobre-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 48px;
   flex-wrap: wrap;
 }
 
 .foto-perfil {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 18%;
   border: 4px solid var(--cor-principal);
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
   flex-shrink: 0;
+  position: static;
 }
 
 .sobre-texto {
@@ -585,15 +587,17 @@ section h2.visivel,
     font-size: 1.5rem;
   }
 
-  .sobre-container {
+    .sobre-container {
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 28px;
   }
 
   .foto-perfil {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
+    object-position: center 18%;
   }
 
   nav ul {
@@ -679,5 +683,90 @@ section h2.visivel,
     margin-left: 0;
     margin-top: 12px;
     display: inline-block;
+  }
+}
+
+/* ====================== CAMINHO B — FOTO NO HEADER ====================== */
+.nav-identidade {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.foto-header {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 2px solid var(--cor-principal);
+  flex-shrink: 0;
+}
+
+.nav-nome {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cor-texto);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .nav-nome {
+    display: none;
+  }
+}
+
+/* ====================== CAMINHO D ====================== */
+nav a.activo {
+  color: var(--cor-principal);
+  font-weight: 600;
+}
+
+.rodape {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 32px 60px;
+  border-top: 1px solid var(--cor-borda);
+  text-align: center;
+}
+
+.rodape p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.rodape-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.rodape-links a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cor-borda);
+  background: var(--cor-branco);
+  color: var(--cor-texto-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: var(--transicao);
+}
+
+.rodape-links a:hover {
+  background: var(--cor-principal);
+  color: #ffffff;
+  border-color: var(--cor-principal);
+}
+
+@media (max-width: 768px) {
+  .social-fixed {
+    display: none;
+  }
+
+  .rodape {
+    padding: 32px 20px 48px;
   }
 }

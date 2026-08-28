@@ -4,18 +4,28 @@ window.addEventListener('load', function() {
         if (loading) {
             loading.style.display = 'none';
         }
-    }, 900);
+    }, 400);
 });
 
 const btnTema = document.getElementById('btn-tema');
 const btnTemaLateral = document.getElementById('btn-tema-lateral');
 
-function toggleTema() {
-    document.body.classList.toggle('dark');
-    const isDark = document.body.classList.contains('dark');
+function aplicarTema(isDark) {
+    document.body.classList.toggle('dark', isDark);
     const emoji = isDark ? '☀️' : '🌙';
     if (btnTema) btnTema.textContent = emoji;
     if (btnTemaLateral) btnTemaLateral.textContent = emoji;
+}
+
+function toggleTema() {
+    const isDark = !document.body.classList.contains('dark');
+    aplicarTema(isDark);
+    localStorage.setItem('tema', isDark ? 'dark' : 'light');
+}
+
+const temaSalvo = localStorage.getItem('tema');
+if (temaSalvo === 'dark') {
+    aplicarTema(true);
 }
 
 if (btnTema) btnTema.addEventListener('click', toggleTema);
@@ -40,6 +50,10 @@ if (btnMenu && menuLateral && overlay) {
     overlay.addEventListener('click', fecharMenu);
 }
 
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') fecharMenu();
+});
+
 const elementos = document.querySelectorAll(
   'article, section h2, .artigo-keywords, .skill-card, .exp-card, .form-card'
 );
@@ -54,4 +68,22 @@ const observador = new IntersectionObserver(function(entradas) {
 
 elementos.forEach(function(el) {
   observador.observe(el);
+});
+
+const seccoes = document.querySelectorAll('section[id]');
+const linksMenu = document.querySelectorAll('nav ul a, .menu-lateral a');
+
+const observadorMenu = new IntersectionObserver(function(entradas) {
+  entradas.forEach(function(entrada) {
+    if (entrada.isIntersecting) {
+      const id = entrada.target.getAttribute('id');
+      linksMenu.forEach(function(link) {
+        link.classList.toggle('activo', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.35 });
+
+seccoes.forEach(function(seccao) {
+  observadorMenu.observe(seccao);
 });
