@@ -87,3 +87,32 @@ const observadorMenu = new IntersectionObserver(function(entradas) {
 seccoes.forEach(function(seccao) {
   observadorMenu.observe(seccao);
 });
+
+const formContacto = document.getElementById('form-contacto');
+const formAviso = document.getElementById('form-aviso');
+
+if (formContacto) {
+  formContacto.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !email || !mensagem) {
+      formAviso.hidden = false;
+      formAviso.textContent = 'Preenche todos os campos.';
+      return;
+    }
+
+    const assunto = encodeURIComponent('Contacto do portfólio — ' + nome);
+    const corpo = encodeURIComponent(
+      'Nome: ' + nome + '\nEmail: ' + email + '\n\n' + mensagem
+    );
+
+    window.location.href = 'mailto:inssaagostinho@gmail.com?subject=' + assunto + '&body=' + corpo;
+
+    formAviso.hidden = false;
+    formAviso.textContent = 'A abrir o teu email...';
+  });
+}

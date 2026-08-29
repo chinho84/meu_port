@@ -770,3 +770,49 @@ nav a.activo {
     padding: 32px 20px 48px;
   }
 }
+
+/* ====================== CAMINHO C — FORMULÁRIO ====================== */
+.form-contacto {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-contacto label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cor-texto);
+  margin-top: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background: var(--cor-branco);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+}
+
+.form-contacto .botao {
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  align-self: flex-start;
+}
+
+.form-aviso {
+  font-size: 14px;
+  color: var(--cor-principal);
+  margin-top: 8px;
+}
